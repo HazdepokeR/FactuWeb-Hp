@@ -2,6 +2,9 @@
     console.log('Ok');
   })();
 
+const sample = require('json/admindata.json');
+console.log(sample);
+
 function GenerarMenuPrincipal(){
   console.log('--GenerarMenuPrincipal()');
   let mainboard = document.getElementById('mainboard');
