@@ -1,3 +1,3 @@
-() =>{
-alert('testxd');
-}
+(() => {
+    console.log('Ok');
+  })();
