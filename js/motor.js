@@ -10,6 +10,7 @@ function GenerarMenuPrincipal(){
   let mainboard = document.getElementById('mainboard');
   let freg = document.createElement('p');
   freg.textContent="firtregister";
-  mainboard.appendChild();
-  
+  mainboard.appendChild(freg);
 }
+
+GenerarMenuPrincipal();
