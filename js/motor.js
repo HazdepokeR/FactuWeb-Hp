@@ -1,8 +1,10 @@
+import sample from 'json/admindata.json';
+
 (() => {
     console.log('Ok');
   })();
 
-import sample from 'json/admindata.json';
+
 console.log(sample);
 
 function GenerarMenuPrincipal(){
