@@ -2,7 +2,7 @@
     console.log('Ok');
   })();
 
-const sample = require('json/admindata.json');
+import sample from 'json/admindata.json';
 console.log(sample);
 
 function GenerarMenuPrincipal(){
