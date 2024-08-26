@@ -1,4 +1,6 @@
-import sample from 'json/admindata.json';
+fetch('json/admindata.sjon')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 (() => {
     console.log('Ok');
