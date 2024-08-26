@@ -1,4 +1,4 @@
-fetch('json/admindata.sjon')
+fetch('json/admindata.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
 
