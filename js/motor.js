@@ -1,6 +1,6 @@
 
 
-fetch('../json/admindata.json')
+fetch('json/admindata.json')
     .then((response) => {//llama al ultimobackup dentro de los archivos del sistema ok!
       json = response.json()
     })
