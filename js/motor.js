@@ -29,9 +29,19 @@
 
 const botoncargar = document.getElementById('cargarprogreso');
 botoncargar.addEventListener("click", GenerarMenuPrincipal);
+const botonguardar = document.getElementById('guardarprogreso');
+botonguardar.addEventListener("click", SalvarProgreso);
+
+let avance;
 
 function SalvarProgreso(){
-
+  console.log('SalvarProgreso--');
+  console.log('se recibe');
+  console.log(avance);
+  console.log('se actualiza a: ');
+  avance.name = 'cambioxdmagia';
+  console.log(avance);
+  console.log('fin--');
 }
 
 
@@ -54,7 +64,7 @@ function GenerarMenuPrincipal(){
       console.log(result.age);
       console.log(result.occupation);
       });
-      
+      avance = result;
       reader.readAsText(upload.files[0]); // Read the uploaded file
     }
   }
