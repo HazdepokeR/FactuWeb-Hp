@@ -1,11 +1,12 @@
 
 
-fetch('json/admindata.json')
+/*fetch('json/admindata.json')
     .then((response) => {//llama al ultimobackup dentro de los archivos del sistema ok!
      response.json()
     })
     .then(
       (json) => {
+        let lecturajson = json;
         console.log(json);//objeto json ok!
         console.log("print de identificador de json");
         console.log("el id del usuario es: " + json.id_usuario[0]);
@@ -24,7 +25,7 @@ fetch('json/admindata.json')
     );
 
 //console.log(sample);
-
+*/
 function SalvarProgreso(){
 
 }
@@ -32,10 +33,35 @@ function SalvarProgreso(){
 
 function GenerarMenuPrincipal(){
   console.log('--GenerarMenuPrincipal()');
-  let mainboard = document.getElementById('mainboard');
-  let freg = document.createElement('p');
-  freg.textContent="firtregister";
-  mainboard.appendChild(freg);
+
+  var upload = document.getElementById('fileInput');
+  var reader = new FileReader();
 }
 
-GenerarMenuPrincipal();
+window.addEventListener('load', function() {
+  var upload = document.getElementById('fileInput');
+  
+  // Make sure the DOM element exists
+  if (upload) 
+  {
+    upload.addEventListener('change', function() {
+      // Make sure a file was selected
+      if (upload.files.length > 0) 
+      {
+        var reader = new FileReader(); // File reader to read the file 
+        
+        // This event listener will happen when the reader has read the file
+        reader.addEventListener('load', function() {
+          var result = JSON.parse(reader.result); // Parse the result into an object 
+          
+          console.log(result);
+          console.log(result.name);
+          console.log(result.age);
+          console.log(result.occupation);
+        });
+        
+        reader.readAsText(upload.files[0]); // Read the uploaded file
+      }
+    });
+  }
+});
