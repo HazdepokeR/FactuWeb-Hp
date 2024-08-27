@@ -34,6 +34,8 @@ botonguardar.addEventListener("click", SalvarProgreso);
 
 var avance;
 var result;
+var url;
+
 
 function SalvarProgreso(){
   console.log('SalvarProgreso--');
@@ -42,6 +44,15 @@ function SalvarProgreso(){
   console.log('se actualiza a: ');
   result.name = 'cambioxdmagia';
   console.log(result);
+  var jsonse = JSON.stringify(json);
+  var blob = new Blob([jsonse], {type: "application/json"});
+  url  = URL.createObjectURL(blob);
+
+  let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
+  let mainboard = document.getElementById('mainboard');
+  let divsaingtodrive = document.createElement('div');
+  divsaingtodrive.textContent = savetodrive;
+  mainboard.appendChild(divsaingtodrive);
   console.log('fin--');
 }
 
