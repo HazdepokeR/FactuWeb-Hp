@@ -1,11 +1,15 @@
 
 
 fetch('json/admindata.json')
-    .then((response) => response.json())
+    .then((response) => {//llama al ultimobackup
+      response.json()
+    })
     .then(
       (json) => {
-        console.log(json);
-        console.log("de momento funciono");
+        console.log(json);//objeto json
+        console.log("print de identificador de json");
+        console.log("el id del usuario es: " + json.id_usuario[0]);
+        
         var jsonse = JSON.stringify(json);
         var blob = new Blob([jsonse], {type: "application/json"});
         var url  = URL.createObjectURL(blob);
