@@ -33,6 +33,7 @@ const botonguardar = document.getElementById('guardarprogreso');
 botonguardar.addEventListener("click", SalvarProgreso);
 
 var avance;
+var result;
 
 function SalvarProgreso(){
   console.log('SalvarProgreso--');
@@ -56,10 +57,8 @@ function GenerarMenuPrincipal(){
     {
       var reader = new FileReader(); // File reader to read the file 
       // This event listener will happen when the reader has read the file
-      var result;
       reader.addEventListener('load', function() {
       result = JSON.parse(reader.result); // Parse the result into an object 
-        
       console.log(result);
       console.log(result.name);
       console.log(result.age);
