@@ -26,6 +26,9 @@
 
 //console.log(sample);
 */
+const botoncargar = document.getElementById('cargarprogreso');
+botoncargar.addEventListener("click", GenerarMenuPrincipal);
+
 function SalvarProgreso(){
 
 }
@@ -35,12 +38,6 @@ function GenerarMenuPrincipal(){
   console.log('--GenerarMenuPrincipal()');
 
   var upload = document.getElementById('fileInput');
-  var reader = new FileReader();
-}
-
-window.addEventListener('load', function() {
-  var upload = document.getElementById('fileInput');
-  
   // Make sure the DOM element exists
   if (upload) 
   {
@@ -64,4 +61,9 @@ window.addEventListener('load', function() {
       }
     });
   }
-});
+
+
+}
+
+
+  
