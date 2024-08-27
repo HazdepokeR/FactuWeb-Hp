@@ -38,10 +38,10 @@ var result;
 function SalvarProgreso(){
   console.log('SalvarProgreso--');
   console.log('se recibe');
-  console.log(avance);
+  console.log(result);
   console.log('se actualiza a: ');
-  avance.name = 'cambioxdmagia';
-  console.log(avance);
+  result.name = 'cambioxdmagia';
+  console.log(result);
   console.log('fin--');
 }
 
