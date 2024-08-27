@@ -1,12 +1,12 @@
 
 
 fetch('json/admindata.json')
-    .then((response) => {//llama al ultimobackup
-      response.json()
+    .then((response) => {//llama al ultimobackup dentro de los archivos del sistema ok!
+      json = response.json()
     })
     .then(
       (json) => {
-        console.log(json);//objeto json
+        console.log(json);//objeto json ok!
         console.log("print de identificador de json");
         console.log("el id del usuario es: " + json.id_usuario[0]);
         
@@ -23,7 +23,7 @@ fetch('json/admindata.json')
       }
     );
 
-console.log(sample);
+//console.log(sample);
 
 function SalvarProgreso(){
 
