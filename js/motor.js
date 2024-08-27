@@ -38,7 +38,7 @@ var url;
 
 
 function SalvarProgreso(){
-  console.log('SalvarProgreso--');
+  console.log('SalvarProgreso--xd');
   console.log('se recibe');
   console.log(result);
   console.log('se actualiza a: ');
