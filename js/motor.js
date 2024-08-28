@@ -41,8 +41,8 @@ function SalvarProgreso(){
   console.log('SalvarProgreso--xd');
   console.log(result);
  
- var result = { key: "value", anotherKey: "anotherValue" };
- var jsonse = JSON.stringify(result);
+ var datatosave = { key: "value", anotherKey: "anotherValue" };
+ var jsonse = JSON.stringify(datatosave);
  var blob = new Blob([jsonse], { type: "application/json" });
  var url = URL.createObjectURL(blob);
  let filesave = document.getElementById('fileoutput');
