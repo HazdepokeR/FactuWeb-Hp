@@ -41,6 +41,7 @@ function SalvarProgreso(){
   console.log('SalvarProgreso--xd');
   console.log(result2);
   var datatosave = JSON.parse(result2);
+  datatosave.name = 'magiax2xd';
   console.log(datatosave);
  //var datatosave = { key: "value", anotherKey: "anotherValue" };
  //var datatosave = JSON.parse(result2);
