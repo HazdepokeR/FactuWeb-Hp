@@ -42,12 +42,12 @@ function SalvarProgreso(){
   console.log(result);
 
   var jsonse = JSON.stringify(result);
-  var blob = new Blob([jsonse], {type: "application/json"});
-  url  = URL.createObjectURL(blob);
+var blob = new Blob([jsonse], { type: "application/json" });
+var url = URL.createObjectURL(blob);
 
-  let filesave = document.getElementById('fileoutput');
-  filesave.href = url;
-  filesave.download = 'archivo.json'; // Nombre sugerido para el archivo
+let filesave = document.getElementById('fileoutput');
+filesave.href = url;
+filesave.download = 'archivo.json'; // Nombre sugerido para el archivo
 
   let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
   
