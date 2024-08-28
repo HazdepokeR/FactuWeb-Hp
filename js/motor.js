@@ -39,16 +39,17 @@ var url;
 
 function SalvarProgreso(){
   console.log('SalvarProgreso--xd');
-  console.log('se recibe');
   console.log(result);
-  console.log('se actualiza a: ');
-  result.name = 'cambioxdmagia';
-  console.log(result);
-  var jsonse = JSON.stringify(json);
+
+  var jsonse = JSON.stringify(result);
   var blob = new Blob([jsonse], {type: "application/json"});
   url  = URL.createObjectURL(blob);
 
+  let filesave = document.getElementById('fileoutput');
+  filesave.append(url);
+
   let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
+  
   let mainboard = document.getElementById('mainboard');
   let divsaingtodrive = document.createElement('div');
   divsaingtodrive.textContent = savetodrive;
