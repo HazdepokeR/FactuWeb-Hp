@@ -49,11 +49,11 @@ function SalvarProgreso(){
  filesave.href = url;
  filesave.download = 'archivo.json';
 
-  let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
+  //let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
   
   let mainboard = document.getElementById('mainboard');
   let divsaingtodrive = document.createElement('div');
-  divsaingtodrive.textContent = savetodrive;
+  //divsaingtodrive.textContent = savetodrive;
   mainboard.appendChild(divsaingtodrive);
   console.log('fin--');
 }
@@ -72,6 +72,7 @@ function GenerarMenuPrincipal(){
       // This event listener will happen when the reader has read the file
       reader.addEventListener('load', function() {
         result = JSON.parse(reader.result); // Parse the result into an object 
+        result2 = JSON.stringify(result);
         console.log(result);
         console.log(result.name);
       });
