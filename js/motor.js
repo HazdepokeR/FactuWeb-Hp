@@ -40,8 +40,10 @@ var result2;
 function SalvarProgreso(){
   console.log('SalvarProgreso--xd');
   console.log(result2);
- 
- var datatosave = { key: "value", anotherKey: "anotherValue" };
+  var datatosave = JSON.parse(result2);
+  console.log(datatosave);
+ //var datatosave = { key: "value", anotherKey: "anotherValue" };
+ //var datatosave = JSON.parse(result2);
  var jsonse = JSON.stringify(datatosave);
  var blob = new Blob([jsonse], { type: "application/json" });
  var url = URL.createObjectURL(blob);
