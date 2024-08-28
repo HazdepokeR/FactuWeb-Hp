@@ -35,11 +35,11 @@ botonguardar.addEventListener("click", SalvarProgreso);
 var avance;
 var result;
 var url;
-
+var result2;
 
 function SalvarProgreso(){
   console.log('SalvarProgreso--xd');
-  console.log(result);
+  console.log(result2);
  
  var datatosave = { key: "value", anotherKey: "anotherValue" };
  var jsonse = JSON.stringify(datatosave);
