@@ -40,26 +40,13 @@ var url;
 function SalvarProgreso(){
   console.log('SalvarProgreso--xd');
   console.log(result);
-
- // Suponiendo que "result" es el objeto que quieres convertir a JSON
+ 
  var result = { key: "value", anotherKey: "anotherValue" };
-
- // Convertir el objeto JSON a una cadena
  var jsonse = JSON.stringify(result);
-
- // Crear un Blob con el contenido JSON
  var blob = new Blob([jsonse], { type: "application/json" });
-
- // Crear una URL para el Blob
  var url = URL.createObjectURL(blob);
-
- // Obtener el elemento <a>
  let filesave = document.getElementById('fileoutput');
-
- // Asignar la URL al href del enlace
  filesave.href = url;
-
- // Establecer el atributo download para sugerir el nombre del archivo
  filesave.download = 'archivo.json';
 
   let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
@@ -84,13 +71,10 @@ function GenerarMenuPrincipal(){
       var reader = new FileReader(); // File reader to read the file 
       // This event listener will happen when the reader has read the file
       reader.addEventListener('load', function() {
-      result = JSON.parse(reader.result); // Parse the result into an object 
-      console.log(result);
-      console.log(result.name);
-      console.log(result.age);
-      console.log(result.occupation);
+        result = JSON.parse(reader.result); // Parse the result into an object 
+        console.log(result);
+        console.log(result.name);
       });
-      avance = result;
       reader.readAsText(upload.files[0]); // Read the uploaded file
     }
   }
