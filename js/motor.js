@@ -46,7 +46,7 @@ function SalvarProgreso(){
   url  = URL.createObjectURL(blob);
 
   let filesave = document.getElementById('fileoutput');
-  filesave.append(url);
+  filesave.vale(url);
 
   let savetodrive = '<div class="g-savetodrive" data-src="url" data-filename="datasave-facuweb.Json"data-sitename="My Company Name"></div>'
   
