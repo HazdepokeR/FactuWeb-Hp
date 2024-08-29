@@ -46,12 +46,10 @@ function GenerarMenuPrincipal(){
       var reader = new FileReader(); // File reader to read the file 
       // This event listener will happen when the reader has read the file
       reader.addEventListener('load', function() {
-        result = JSON.parse(reader.result); // Parse the result into an object 
-        result2 = JSON.stringify(result);
-        console.log(result);
-        console.log(result.userdata.name);
-      });
-      reader.readAsText(upload.files[0]); // Read the uploaded file
+      result = JSON.parse(reader.result); // Parse the result into an object 
+      result2 = JSON.stringify(result);
+      console.log(result);
+      console.log(result.userdata.name);
       let Ningresos = document.getElementById('Ningresos');
       let Ngastos = document.getElementById('Ngastos');
       let Nextra  = document.getElementById('Nextra');
@@ -59,6 +57,9 @@ function GenerarMenuPrincipal(){
       Ningresos.textContent = result.data.ingresos;
       Ngastos.textContent = result.data.gastos;
       Nextra.textContent = result.data.total;
+      });
+      reader.readAsText(upload.files[0]); // Read the uploaded file
+      
 
 
     }
