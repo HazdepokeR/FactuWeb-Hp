@@ -58,7 +58,7 @@ function SalvarProgreso(){
   let divsaingtodrive = document.createElement('div');
   //divsaingtodrive.textContent = savetodrive;
   mainboard.appendChild(divsaingtodrive);
-  filesave[0].click();
+  filesave.click();
   console.log('fin--');
 }
 
