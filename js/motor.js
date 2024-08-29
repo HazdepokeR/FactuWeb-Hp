@@ -52,6 +52,15 @@ function GenerarMenuPrincipal(){
         console.log(result.userdata.name);
       });
       reader.readAsText(upload.files[0]); // Read the uploaded file
+      let Ningresos = document.getElementById('Ningresos');
+      let Ngastos = document.getElementById('Ngastos');
+      let Nextra  = document.getElementById('Nextra');
+
+      Ningresos.textContent = result.data.ingresos;
+      Ngastos.textContent = result.data.gastos;
+      Nextra.textContent = result.data.total;
+
+
     }
   }
 }
