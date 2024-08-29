@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Sticky top</a>
+      </nav>
     <div id="LoadArea" class="container">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 ">
                 <input type="file" id="fileInput">
                 <button id="cargarprogreso">Cargar Mi Progreso</button>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-md-center">
             <div class="col-md-12">
                 <a href="#" id="fileoutput" style="display: none;">xfile</a>
                 <button id="guardarprogreso">Guardar Mi Progreso xx</button>
