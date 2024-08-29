@@ -36,6 +36,7 @@ function SalvarProgreso(){
 
 function GenerarMenuPrincipal(){
   console.log('--GenerarMenuPrincipal()');
+  let upload = document.getElementById('fileInput');
     if (upload.files.length > 0) 
     {
       var reader = new FileReader(); // File reader to read the file 
