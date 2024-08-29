@@ -36,11 +36,6 @@ function SalvarProgreso(){
 
 function GenerarMenuPrincipal(){
   console.log('--GenerarMenuPrincipal()');
-
-  var upload = document.getElementById('fileInput');
-  // Make sure the DOM element exists
-  if (upload) 
-  {
     if (upload.files.length > 0) 
     {
       var reader = new FileReader(); // File reader to read the file 
@@ -59,11 +54,11 @@ function GenerarMenuPrincipal(){
       Nextra.textContent = result.data.total;
       });
       reader.readAsText(upload.files[0]); // Read the uploaded file
-      
-
-
+      let uploadarea = document.getElementById('LoadArea-upload');
+      uploadarea.style.display = "none";
+      let savearea = document.getElementById('LoadArea-save');
+      uploadarea.style.display = "block";
     }
-  }
 }
 
 
