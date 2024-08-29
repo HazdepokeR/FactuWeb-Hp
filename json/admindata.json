@@ -1,5 +1,12 @@
 {
+  "userdata": {
     "name": "Michael Rouse",
     "age": "20",
     "occupation": "Student"
+  },
+  "datatosave":{
+    "total": 999,
+    "gastos": 666,
+    "ingresos": 777
   }
+}

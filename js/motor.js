@@ -78,7 +78,7 @@ function GenerarMenuPrincipal(){
         result = JSON.parse(reader.result); // Parse the result into an object 
         result2 = JSON.stringify(result);
         console.log(result);
-        console.log(result.name);
+        console.log(result.userdata.name);
       });
       reader.readAsText(upload.files[0]); // Read the uploaded file
     }
