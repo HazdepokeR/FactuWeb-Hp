@@ -58,7 +58,7 @@ function GenerarMenuPrincipal(){
       let uploadarea = document.getElementById('LoadArea-upload');
       uploadarea.style.display = "none";
       let savearea = document.getElementById('LoadArea-save');
-      uploadarea.style.display = "block";
+      uploadarea.style.display = "block !important";
     }
 }
 
