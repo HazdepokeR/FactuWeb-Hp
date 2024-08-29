@@ -7,6 +7,9 @@
   "data":{
     "total": 999,
     "gastos": 666,
-    "ingresos": 777
+    "ingresos": 777,
+    "gastosfijos":{
+
+    }
   }
 }
