@@ -1,38 +1,10 @@
 
-
-/*fetch('json/admindata.json')
-    .then((response) => {//llama al ultimobackup dentro de los archivos del sistema ok!
-     response.json()
-    })
-    .then(
-      (json) => {
-        let lecturajson = json;
-        console.log(json);//objeto json ok!
-        console.log("print de identificador de json");
-        console.log("el id del usuario es: " + json.id_usuario[0]);
-        
-        var jsonse = JSON.stringify(json);
-        var blob = new Blob([jsonse], {type: "application/json"});
-        var url  = URL.createObjectURL(blob);
-
-        var a = document.createElement('a');
-        a.href        = url;
-        a.download    = "backup.json";
-        a.textContent = "Download backup.json";
-
-        document.getElementById('json').appendChild(a);
-      }
-    );
-
-//console.log(sample);
-*/
-
 const botoncargar = document.getElementById('cargarprogreso');
 botoncargar.addEventListener("click", GenerarMenuPrincipal);
 const botonguardar = document.getElementById('guardarprogreso');
 botonguardar.addEventListener("click", SalvarProgreso);
 
-var avance;
+
 var result;
 var url;
 var result2;
@@ -43,8 +15,7 @@ function SalvarProgreso(){
   var datatosave = JSON.parse(result2);
   datatosave.name = 'magiax2xd';
   console.log(datatosave);
- //var datatosave = { key: "value", anotherKey: "anotherValue" };
- //var datatosave = JSON.parse(result2);
+
  var jsonse = JSON.stringify(datatosave);
  var blob = new Blob([jsonse], { type: "application/json" });
  var url = URL.createObjectURL(blob);
